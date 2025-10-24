@@ -170,12 +170,4 @@ async function fetchQuotesFromServer() {
 
     if (updated) {
       saveQuotes();
-      populateCategories();
-      filterQuotes();
-      if (conflictNotification) {
-        conflictNotification.style.display = "block";
-        setTimeout(() => {
-          conflictNotification.style.display = "none";
-        }, 5000);
-      }
-   
+     
