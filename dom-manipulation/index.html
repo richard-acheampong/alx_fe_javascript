@@ -2,12 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Dynamic Quote Generator</title>
   <style>
     body { font-family: Arial, sans-serif; padding: 20px; }
     #quoteDisplay { margin: 20px 0; font-size: 1.2em; }
     .form-section { margin-top: 30px; }
+    .notification {
+      background: #fffae6;
+      border: 1px solid #ffd700;
+      padding: 10px;
+      margin-top: 10px;
+      display: none;
+    }
   </style>
 </head>
 <body>
@@ -38,6 +45,10 @@
     <h2>Import/Export Quotes</h2>
     <button id="exportBtn">Export Quotes</button>
     <input type="file" id="importFile" accept=".json" />
+  </div>
+
+  <div class="notification" id="conflictNotification">
+    Server data has been synced. Local changes may have been overridden.
   </div>
 
   script.js</script>
